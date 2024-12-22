@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+html{
+    height: 100%;
+    box-sizing: border-box; /* Utilisation de border-box pour que le padding et les bordures ne dépassent pas la largeur */
+    background : linear-gradient(135deg, rgb(41, 224, 212) 0%, rgb(193, 246, 214) 100%);
+    font-display: swap;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: #252a49;
+}
+
+.miaou{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    border-radius: 10px;
+    padding: 2%;
+    margin: 5%;
+    display: flex;
+}
+
+/* Conteneur des dates */
+.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet aux enfants de passer à la ligne si l'écran est trop petit */
+    width: 100%; /* Taille fixe pour les écrans larges */
+    height: auto; /* La hauteur s'adapte à l'espace disponible */
+    gap: 15px; /* Espacement entre les éléments */
+    padding: 10px; /* Espacement interne pour la flexibilité */
+    box-sizing: border-box; /* Important pour que le padding et les bordures soient inclus dans la largeur */
+}
+
+/* Élément Date */
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22%; /* Largeur ajustée pour les grands écrans */
+    min-width: 120px; /* Largeur minimale pour éviter que l'élément soit trop petit sur mobile */
+    height: 150px; /* Hauteur fixe */
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box; /* Assure que padding et bordures sont inclus dans la largeur */
+}
+
+/* Responsive Design : Ajustement sur les petits écrans */
+@media screen and (max-width: 700px) {
+    .date {
+        width: 45%; /* Réduit la taille des éléments sur les écrans plus petits */
+        height: 130px;
+    }
+    h1{
+        font-size: x-large;
+        color: #252a49;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container2 {
+        flex-direction: row; /* Empile les éléments sur les petits écrans */
+        align-items: center; /* Centre les éléments */
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .date {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Crée 3 colonnes égales */
+        gap: 10px;
+        width: 100%; /* Prend toute la largeur sur mobile */
+        height: 20%;
+        margin-bottom: 10px; /* Ajoute un espacement entre les éléments */
+    }
+
+    h1{
+        font-size: medium;
+        text-align: center;
+    }
+}
+
+/* Style pour les nombres affichés */
+.dateNombre {
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    padding: 10px; /* Ajuste l'espacement interne */
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    width: 80%; /* Largeur de l'élément */
+    height: 50%;
+    margin: auto;
+    box-sizing: border-box; /* Assure que padding et bordures sont inclus dans la largeur */
+}
+
+/* Wrapper central */
+.wrapper {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    width: 80%; /* Largeur fixe */
+    max-width: 1000px; /* Optionnel : Limite la largeur maximale */
+    height: 50%;
+    padding: 20px;  /* Ajoute un espacement interne */
+}
+
+/* Style du texte des titres */
+h2 {
+    font-size: 200%; /* Taille du texte */
+    line-height: 1; /* Ajuste l'espacement vertical si nécessaire */
+    text-align: center;
+    padding: 0; /* Centre le texte */
+    margin: 0; /* Enlève les marges par défaut */
+    color: #b51a67; /* Ajuste la couleur */
+    font-weight: 700;
+}
+
+/* Texte de description */
+.dateText {
+    font-family: "poppins", sans-serif;
+    font-size: 1rem;
+}
