@@ -105,8 +105,6 @@ h1{
     align-items: center;
     border-radius: 10%;
     padding: 10px; /* Ajuste l'espacement interne */
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
     width: 80%; /* Largeur de l'élément */
     height: 50%;
     margin: auto;
