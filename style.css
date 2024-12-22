@@ -62,6 +62,23 @@ h1{
     box-sizing: border-box; /* Assure que padding et bordures sont inclus dans la largeur */
 }
 
+/* Wrapper central */
+.wrapper {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    width: 80%; /* Largeur fixe */
+    max-width: 1000px; /* Optionnel : Limite la largeur maximale */
+    height: 50%;
+    padding: 20px;  /* Ajoute un espacement interne */
+}
+
 /* Responsive Design : Ajustement sur les petits écrans */
 @media screen and (max-width: 700px) {
     .date {
@@ -95,6 +112,10 @@ h1{
         font-size: medium;
         text-align: center;
     }
+
+    .wrapper{
+        height: 60%;
+    }
 }
 
 /* Style pour les nombres affichés */
@@ -111,22 +132,7 @@ h1{
     box-sizing: border-box; /* Assure que padding et bordures sont inclus dans la largeur */
 }
 
-/* Wrapper central */
-.wrapper {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(4px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: #232323;
-    width: 80%; /* Largeur fixe */
-    max-width: 1000px; /* Optionnel : Limite la largeur maximale */
-    height: 50%;
-    padding: 20px;  /* Ajoute un espacement interne */
-}
+
 
 /* Style du texte des titres */
 h2 {
